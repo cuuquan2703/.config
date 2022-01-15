@@ -1,0 +1,14 @@
+{
+  "tsserver.implicitProjectConfig.experimentalDecorators": true,
+  "snippets.ultisnips.usePythonx": false,
+  "eslint.enable":true,
+  "eslint.exeArgv":[],
+  "eslint.packageManager":["npm","yarn"],
+  "eslint.alwaysShowStatus":true,
+  "eslint.nodeEnv":null,
+  "eslint.autoFixOnSave":true,
+  "eslint.quiet":true,
+  "eslint.onIgnoredFiles":"warn",
+  "eslint.probe":["javascript","javascriptreact","typescript","typescriptreact","html","vue","markdown","json","vim","python","C++"],
+  "eslint.autoFixOnSave":true
+}
