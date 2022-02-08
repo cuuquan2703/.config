@@ -1,8 +1,7 @@
 call plug#begin('~/AppData/Local/nvim/plug')
-
 "{{Theme}}
 Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
-"{{File Browser}}
+""{{File Browser}}
 Plug 'preservim/nerdTree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'ryanoasis/vim-devicons'
@@ -10,7 +9,6 @@ Plug 'ryanoasis/vim-devicons'
 "{{File search
 Plug 'junegunn/fzf', {'do' : { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-
 "{{ Status Bar
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -31,7 +29,6 @@ Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 "{{ LSP
 Plug 'nvim-lua/completion-nvim'
-
 "{{Debug
 Plug 'puremourning/vimspector'
 
@@ -60,8 +57,23 @@ let g:tokyonight_colors = {
 
 colorscheme tokyonight
 
-"setup plugin
+inoremap <A-s> <Down>
+inoremap <A-a> <Left>
+inoremap <A-w> <Up>
+inoremap <A-d> <Right>
+
+
+"Duplicate line
+nnoremap <C-d> :copy .<CR>
+inoremap <C-d> <ESC> :copy .<CR> i
+
+inoremap <C-x> <ESC> dd i
+inoremap <C-s> <ESC>
+nnoremap <C-s> i
+
+"s e t u p   plugin
 let nvim_dir = '~\AppData\Local\nvim\config_Vim_Plugin\'
+
 execute 'source '.nvim_dir.'nerTree.vim'
 execute 'source '.nvim_dir.'Solarize.vim'
 execute 'source '.nvim_dir.'fzf.vim'
@@ -72,3 +84,6 @@ execute 'source'.nvim_dir.'lightline.vim'
 execute 'source'.nvim_dir.'Coc.vim'
 
 nnoremap <F8> <Plug>(coc-codeaction)  
+"map <S-Down> <S-j>
+"map <S-Up> <S-k>
+
