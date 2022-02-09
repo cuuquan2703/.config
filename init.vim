@@ -1,6 +1,7 @@
 call plug#begin('~/AppData/Local/nvim/plug')
 "{{Theme}}
-Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+"Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'overcache/NeoSolarized'
 ""{{File Browser}}
 Plug 'preservim/nerdTree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -41,21 +42,16 @@ call plug#end()
 set autowrite
 set numberwidth=5
 set number
-syntax on
+syntax enable
 set ignorecase
 set termguicolors
+set winblend=0
+set wildoptions=pum
+set pumblend=5
 set background=dark
-let g:tokyonight_style = "storm"
-let g:tokyonight_italic_functions = 1
-let g:tokyonight_sidebars = [ "qf", "vista_kind", "terminal", "packer" ]
-let g:tokyonight_transparent = 1
-
-let g:tokyonight_colors = {
-  \ 'hint': 'orange',
-  \ 'error': '#ff0000'
-\ }
-
-colorscheme tokyonight
+let g:neosolarized_termtrans=1
+runtime ~/.config/nvim/colors/NeoSolarized.vim
+colorscheme NeoSolarized
 
 inoremap <A-s> <Down>
 inoremap <A-a> <Left>
