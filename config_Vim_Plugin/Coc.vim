@@ -3,6 +3,15 @@ nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
+nnoremap <silent> K :call <SID>show_documentation()<CR>
+nnoremap <silent> gh :call <SID>show_documentation()<CR>
+function! s:show_documentation()
+  if &filetype == 'vim'
+    execute 'h '.expand('<cword>')
+  else
+    call CocAction('doHover')
+  endif
+endfunction
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all iagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
