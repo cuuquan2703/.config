@@ -17,16 +17,27 @@ Plug 'vim-airline/vim-airline-themes'
 "{Scroll-Bar
 Plug 'petertriho/nvim-scrollbar'
 "{{ Code intelligense
-Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'jiangmiao/auto-pairs'
 Plug 'alvan/vim-closetag'
 Plug 'mattn/emmet-vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'itchyny/lightline.vim'
+
 "{{ Code Syntax Highlight
 Plug 'yuezk/vim-js'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+
+"COC plugin
+Plug 'neoclide/coc.nvim', {'branch':'release'}
+Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tsserver', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-eslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-tslint', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-css', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-lists', {'do': 'yarn install --frozen-lockfile'} " mru and stuff
+Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'} " color highlighting
 
 "{{ LSP
 Plug 'nvim-lua/completion-nvim'
@@ -40,8 +51,8 @@ call plug#end()
 
 "set relativenumber
 set autowrite
-set numberwidth=5
 set number
+set cursorline
 syntax enable
 set ignorecase
 set termguicolors
@@ -53,33 +64,17 @@ let g:neosolarized_termtrans=1
 runtime ~/.config/nvim/colors/NeoSolarized.vim
 colorscheme NeoSolarized
 
-inoremap <A-s> <Down>
-inoremap <A-a> <Left>
-inoremap <A-w> <Up>
-inoremap <A-d> <Right>
-
-
-"Duplicate line
-nnoremap <C-d> :copy .<CR>
-inoremap <C-d> <ESC> :copy .<CR> i
-
-inoremap <C-x> <ESC> dd i
-inoremap <C-s> <ESC>
-nnoremap <C-s> i
-
 "s e t u p   plugin
-let nvim_dir = '~\AppData\Local\nvim\config_Vim_Plugin\'
 
+let nvim_dir = '~\AppData\Local\nvim\config_Vim_Plugin\'
+execute 'source '.nvim_dir.'ExtraKey.vim'
 execute 'source '.nvim_dir.'nerTree.vim'
 execute 'source '.nvim_dir.'Solarize.vim'
 execute 'source '.nvim_dir.'fzf.vim'
 execute 'source '.nvim_dir.'autocompletion.vim'
-"execute 'source '.nvim_dir.'lspconfig.vim'
 execute 'source '.nvim_dir.'scrollBar.vim'
 execute 'source'.nvim_dir.'lightline.vim'
 execute 'source'.nvim_dir.'Coc.vim'
 
-nnoremap <F8> <Plug>(coc-codeaction)  
-"map <S-Down> <S-j>
-"map <S-Up> <S-k>
+
 
