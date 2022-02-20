@@ -4,6 +4,9 @@
   "diagnostic.warningSign": "⚠",
   "diagnostic.infoSign": "⚠",
   "diagnostic.enableMessage": "jump",
+  "diagnostic.checkCurrentLine": true,
+  "diagnostic.virtualText": true,
+  "diagnostic.virtualTextCurrentLineOnly": false,
   "suggest.completionItemKindLabels": {
     "keyword": "\uf1de", //  sliders
     "variable": "\ue79b", //  isometric box
