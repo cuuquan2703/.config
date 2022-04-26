@@ -1,5 +1,6 @@
 {
-  "coc.source.emoji.filetypes": ["markdown"],
+  "pairs.enableCharacters":["(","{","[","\"","`","'"],
+  "coc.source.emoji.filetypes" : ["markdown"],
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "⚠",
   "diagnostic.infoSign": "⚠",
@@ -36,6 +37,8 @@
     "default": "\uf29c" //  question mark in circle
   },
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
+  "javascript.suggest.autoImports": true,
+  "typescript.suggest.autoImports": true,
   "snippets.ultisnips.usePythonx": false,
   "eslint.enable":true,
   "eslint.exeArgv":[],
@@ -46,5 +49,17 @@
   "eslint.quiet":true,
   "eslint.onIgnoredFiles":"warn",
   "eslint.probe":["javascript","javascriptreact","typescript","typescriptreact","html","vue","markdown","json","vim","python","C++"],
-  "eslint.autoFixOnSave":true
+  "eslint.autoFixOnSave":true,
+  "languageserver": {
+  "ccls": {
+    "command": "ccls",
+    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
+    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
+    "initializationOptions": {
+        "cache": {
+          "directory": "/tmp/ccls"
+        }
+      }
+  }
+}
 }

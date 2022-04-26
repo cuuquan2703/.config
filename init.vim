@@ -14,6 +14,9 @@ Plug 'junegunn/fzf.vim'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
+"Tab
+Plug 'kyazdani42/nvim-web-devicons'
+Plug 'romgrk/barbar.nvim'
 "{Scroll-Bar
 Plug 'petertriho/nvim-scrollbar'
 "{{ Code intelligense
@@ -28,6 +31,9 @@ Plug 'yuezk/vim-js'
 Plug 'MaxMEllon/vim-jsx-pretty'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 
+"Snippet
+Plug 'SirVer/ultisnips'
+Plug 'mlaursen/vim-react-snippets'
 "COC plugin
 Plug 'neoclide/coc.nvim', {'branch':'release'}
 Plug 'neoclide/coc-snippets', {'do': 'yarn install --frozen-lockfile'}
@@ -48,7 +54,6 @@ Plug 'puremourning/vimspector'
 Plug 'tpope/vim-fugitive'
 
 call plug#end()
-
 "set relativenumber
 set autowrite
 set number
@@ -73,8 +78,25 @@ execute 'source '.nvim_dir.'Solarize.vim'
 execute 'source '.nvim_dir.'fzf.vim'
 execute 'source '.nvim_dir.'autocompletion.vim'
 execute 'source '.nvim_dir.'scrollBar.vim'
-execute 'source'.nvim_dir.'lightline.vim'
-execute 'source'.nvim_dir.'Coc.vim'
-
-
+execute 'source '.nvim_dir.'lightline.vim'
+execute 'source '.nvim_dir.'Coc.vim'
+execute 'source '.nvim_dir.'CloseTag.vim'
+"execute 'source'.nvim_dir.'Extra.vim'
+execute 'source'.nvim_dir.'Tab.vim'
+"Tab
+nnoremap <C-Left> :tabprevious<CR>
+nnoremap <C-Right> :tabnext<CR>
+"go tab by number
+nnoremap 1 1gt
+nnoremap 2 2gt
+nnoremap 3 3gt
+nnoremap 4 4gt
+nnoremap 5 5gt
+nnoremap 6 6gt
+nnoremap 7 7gt
+nnoremap 8 8gt
+nnoremap 9 9gt
+nnoremap 0 :tablast<CR>
+nnoremap <C-q> :BufferClose<CR>
+map <C-s> :w<CR>
 
