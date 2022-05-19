@@ -12,6 +12,19 @@ function! s:show_documentation()
     call CocAction('doHover')
   endif
 endfunction
+
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
+
+inoremap <silent><expr> <Tab>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<Tab>" :
+      \ coc#refresh() 
+inoremap <silent><expr> <NUL> coc#refresh()
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 " Use `[g` and `]g` to navigate diagnostics
 " Use `:CocDiagnostics` to get all iagnostics of current buffer in location list.
 nmap <silent> [g <Plug>(coc-diagnostic-prev)

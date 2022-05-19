@@ -1,3 +1,4 @@
+"Remap moving key
 "Move in Insert Mode
 inoremap <A-s> <Down>
 inoremap <A-a> <Left>
@@ -7,6 +8,7 @@ inoremap <A-d> <Right>
 "Duplicate line
 nnoremap <C-d> :copy .<CR>
 inoremap <C-d> <ESC> :copy .<CR> a <Bs>
+noremap <C-d> <ESC> :copy .<CR> a <Bs>
 
   "Goto end/begin of a line in InsertMode
 inoremap <C-e> <ESC> $i<Right>
@@ -21,13 +23,12 @@ nnoremap <space> a
 
 "Go to file in vertical spilttab
 map <C-F12> :vertical wincmd f<CR> :wincmd x <CR> :wincmd l <CR>
-
+nnoremap <c-s-w> :Sayonara<CR>
    "move line up/down
-nnoremap <silent> <C-Up> :call <SID>swap_up()<CR>
-nnoremap <silent> <C-Down> :call <SID>swap_down()<CR>
-inoremap <silent> <C-Up> <ESC>  :call <SID>swap_up()<CR> 
-inoremap <silent> <C-Down> <ESC>  :call <SID>swap_down()<CR> 
-
+nnoremap <silent> <C-Up> :m .-2<CR>==
+nnoremap <silent> <C-Down> :m .+1<CR>==
+inoremap <silent> <C-Up> <ESC> :m .-2<CR>==gi
+inoremap <silent> <C-Down> <ESC> :m .+1<CR>==gi
 "resize splittab
 nnoremap <silent> <C-Right> :vertical resize +5<CR>
 nnoremap <silent> <C-Left> :vertical resize -5<CR>
