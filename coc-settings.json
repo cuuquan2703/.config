@@ -1,6 +1,19 @@
 {
-  "pairs.enableCharacters":["(","{","[","\"","`","'"],
-  "coc.source.emoji.filetypes" : ["markdown"],
+  "pairs.enableCharacters": ["(", "{", "[", "\"", "`", "'"],
+  "coc.source.emoji.filetypes": ["markdown"],
+  "coc.preferences.formatOnSaveFiletypes": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "vim",
+    "python",
+    "C++"
+  ],
   "diagnostic.errorSign": "✘",
   "diagnostic.warningSign": "⚠",
   "diagnostic.infoSign": "⚠",
@@ -9,57 +22,65 @@
   "diagnostic.virtualText": true,
   "diagnostic.virtualTextCurrentLineOnly": false,
   "suggest.completionItemKindLabels": {
-    "keyword": "\uf1de", //  sliders
-    "variable": "\ue79b", //  isometric box
-    "value": "\uf89f", //  digits 123
-    "operator": "\u03a8", // Ψ greek letter psi
-    "constructor": "\uf0ad", //  wrench
-    "function": "\u0192", // ƒ latin small letter F
-    "reference": "\ufa46", // 渚 retweet symbol
-    "constant": "\uf8fe", //  greek letter pi
-    "method": "\uf09a", //  facebook "f"
-    "struct": "\ufb44", // פּ file tree
-    "class": "\uf0e8", //  hierarchy / site map
-    "interface": "\uf417", //  git commit / line interrupted by circle
-    "text": "\ue612", //  left-justified lines
-    "enum": "\uf02c", //  pair of tags
-    "enumMember": "\uf02b", //  tag
-    "module": "\uf40d", //  code file / page showing angle brackets
-    "color": "\ue22b", //  palette
-    "property": "\ue624", //  predator dots
-    "field": "\uf9be", // 料left-justified sorted lines
-    "unit": "\uf475", //  negative-space ellipsis
-    "event": "\ufacd", // 鬒clock alert / clock with exclamation mark
-    "file": "\uf15b", //  file / blank page
-    "folder": "\uf07b", //  folder
-    "snippet": "\ue60b", //  pair of curly braces
-    "typeParameter": "\uf728", //  file presentation box
-    "default": "\uf29c" //  question mark in circle
+    "default": "\uf29c",
+    "method": "",
+    "function": "",
+    "constructor": "",
+    "field": "ﰠ",
+    "variable": "",
+    "class": "ﴯ",
+    "interface": "",
+    "module": "",
+    "property": "ﰠ",
+    "unit": "塞",
+    "value": "",
+    "enum": "",
+    "keyword": "",
+    "snippet": "",
+    "color": "",
+    "file": "",
+    "reference": "",
+    "folder": "",
+    "enumMember": "",
+    "constant": "",
+    "struct": "פּ",
+    "event": "",
+    "operator": "",
+    "typeParameter": ""
   },
   "tsserver.implicitProjectConfig.experimentalDecorators": true,
   "javascript.suggest.autoImports": true,
   "typescript.suggest.autoImports": true,
   "snippets.ultisnips.usePythonx": false,
-  "eslint.enable":true,
-  "eslint.exeArgv":[],
-  "eslint.packageManager":["npm","yarn"],
-  "eslint.alwaysShowStatus":true,
-  "eslint.nodeEnv":null,
-  "eslint.autoFixOnSave":true,
-  "eslint.quiet":true,
-  "eslint.onIgnoredFiles":"warn",
-  "eslint.probe":["javascript","javascriptreact","typescript","typescriptreact","html","vue","markdown","json","vim","python","C++"],
-  "eslint.autoFixOnSave":true,
+  "eslint.enable": true,
+  "eslint.exeArgv": [],
+  "eslint.packageManager": ["npm", "yarn"],
+  "eslint.alwaysShowStatus": true,
+  "eslint.nodeEnv": null,
+  "eslint.autoFixOnSave": true,
+  "eslint.quiet": true,
+  "eslint.onIgnoredFiles": "warn",
+  "eslint.probe": [
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "vue",
+    "markdown",
+    "json",
+    "vim",
+    "python",
+    "C++"
+  ],
+  "eslint.autoFixOnSave": true,
   "languageserver": {
-  "ccls": {
-    "command": "ccls",
-    "filetypes": ["c", "cc", "cpp", "c++", "objc", "objcpp"],
-    "rootPatterns": [".ccls", "compile_commands.json", ".git/", ".hg/"],
-    "initializationOptions": {
-        "cache": {
-          "directory": "/tmp/ccls"
-        }
-      }
-  }
-}
+    "go": {
+      "command": "gopls",
+      "rootPatterns": ["go.mod"],
+      "trace.server": "verbose",
+      "filetypes": ["go"]
+    }
+  },
+  "snippets.userSnippetsDirectory": "~/AppData/Local/nvim/snips"
 }

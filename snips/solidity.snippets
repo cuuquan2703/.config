@@ -1,0 +1,15 @@
+snippet spdx "Basic licnse declare" b
+//SPDX-License-Identifier: MIT
+pragma solidity ${1:Version};
+
+contract ${2:Name}{
+	
+}
+endsnippet
+
+
+snippet fvr "Function view return " b
+function ${1:Name}() public view returns(${2:Type}) {
+	return ${3:variables};
+}
+endsnippet

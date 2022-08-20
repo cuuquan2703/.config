@@ -1,0 +1,3 @@
+vim.o.clipboard = "unnamedplus"
+
+
