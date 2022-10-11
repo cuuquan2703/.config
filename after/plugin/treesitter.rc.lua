@@ -25,7 +25,8 @@ ts.setup {
     "yaml",
     "dockerfile",
     "solidity",
-    "rust"
+    "rust",
+    "javascript"
   },
   autotag = {
     enable = true,
