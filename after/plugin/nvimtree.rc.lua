@@ -8,7 +8,7 @@
       ignore_buffer_on_setup = false,
       open_on_setup = false,
       open_on_setup_file = false,
-      open_on_tab = false,
+      open_on_tab = true,
       ignore_buf_on_tab_change = {},
       sort_by = "name",
       root_dirs = {},
@@ -20,11 +20,11 @@
       remove_keymaps = false, -- boolean (disable totally or not) or list of key (lhs)
       view = {
         adaptive_size = false,
-        centralize_selection = false,
-        width = 30,
+        centralize_selection = true,
+        width = 40,
         height = 30,
         hide_root_folder = false,
-        side = "left",
+        side = "right",
         preserve_window_proportions = false,
         number = false,
         relativenumber = false,
@@ -49,9 +49,9 @@
         },
       },
       renderer = {
-        add_trailing = false,
+        add_trailing = true,
         group_empty = false,
-        highlight_git = false,
+        highlight_git = true,
         full_name = false,
         highlight_opened_files = "none",
         root_folder_modifier = ":~",
@@ -109,7 +109,7 @@
         auto_open = true,
       },
       update_focused_file = {
-        enable = false,
+        enable = true,
         update_root = false,
         ignore_list = {},
       },
@@ -119,7 +119,7 @@
         args = {},
       },
       diagnostics = {
-        enable = false,
+        enable = true,
         show_on_dirs = false,
         debounce_delay = 50,
         icons = {

@@ -3,8 +3,24 @@ local opt = vim.opt
 local api = vim.api
 local cmd = api.nvim_command
 local fn = vim.fn
+local remap = vim.api.nvim_set_keymap
+local npairs = require('nvim-autopairs')
+npairs.setup({map_cr=false})
 
---opt.nobackup = true
+
+
+_G.MUtils= {}
+
+MUtils.completion_confirm=function()
+    if vim.fn["coc#pum#visible"]() ~= 0  then
+        return vim.fn["coc#pum#confirm"]()
+    else
+        return npairs.autopairs_cr()
+    end
+end
+
+remap('i' , '<C-o>','v:lua.MUtils.completion_confirm()', {expr = true , noremap = true})
+--opt.nobackup = trues
 --opt.nowritebackup = true
 
 --opt.updatetime = 300

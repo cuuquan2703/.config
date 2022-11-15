@@ -1,4 +1,8 @@
 local status, ts = pcall(require,'nvim-treesitter.configs')
+local Rule = require('nvim-autopairs.rule')
+local npairs = require('nvim-autopairs')
+
+npairs.setup({map_cr = true})
 
 if (not status) then return end
 

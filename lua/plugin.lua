@@ -3,6 +3,7 @@ if (not status) then end
 vim.cmd [[packadd packer.nvim]]
 
 
+
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'dracula/vim',as = 'dracula'}
@@ -36,4 +37,5 @@ packer.startup(function(use)
   }
     use 'nvim-lua/plenary.nvim'
     use {'akinsho/toggleterm.nvim',tag = 'v2.*'}
+    use 'tpope/vim-fugitive'
 end)

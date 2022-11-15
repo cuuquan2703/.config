@@ -19,10 +19,11 @@ keymap.set('n','<C-Down>',':m .+1<CR>==',{silent=true})
 keymap.set('i','<C-Up>',':m .-2<CR>==',{silent=true})
 keymap.set('i','<C-Down>',':m .+1<CR>==',{silent=true})
 
---Save 
+--Save
 keymap.set('n','<C-s>',':w<CR>',{silent=true})
 keymap.set('i','<C-s>','<ESC>:w<CR>',{silent=true})
-
+--Undo
+keymap.set('i','<C-z>','<ESC>:undo<CR>i',{silent=true})
 --Save and quit
 keymap.set('n','wq',':wq<CR>')
 --Newtab
@@ -54,3 +55,4 @@ keymap.set('i','<C-Down>','<Esc>:m+1<CR>i',{silent=true})
 
 --Swicth to InserMode
 keymap.set('n','<space>','a')
+
