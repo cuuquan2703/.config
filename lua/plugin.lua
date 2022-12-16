@@ -13,7 +13,7 @@ packer.startup(function(use)
     }
  --   use 'neovim/nvim-lspconfig'
     use 'onsails/lspkind-nvim'
-    use 'hrsh7th/cmp-buffer'
+    use 'hrsh7th/cfp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
     use 'L3MON4D3/LuaSnip'
@@ -38,4 +38,6 @@ packer.startup(function(use)
     use 'nvim-lua/plenary.nvim'
     use {'akinsho/toggleterm.nvim',tag = 'v2.*'}
     use 'tpope/vim-fugitive'
+    use "lukas-reineke/indent-blankline.nvim"
+    use "tpope/vim-surround"
 end)
