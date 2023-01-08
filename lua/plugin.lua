@@ -7,12 +7,14 @@ vim.cmd [[packadd packer.nvim]]
 packer.startup(function(use)
     use 'wbthomason/packer.nvim'
     use {'dracula/vim',as = 'dracula'}
+    -- use { "catppuccin/nvim", as = "catppuccin" }
+    -- use "EdenEast/nightfox.nvim" -- Packer
     use {
          'nvim-lualine/lualine.nvim',
         requires = { 'kyazdani42/nvim-web-devicons', opt = true }
     }
  --   use 'neovim/nvim-lspconfig'
-    use 'onsails/lspkind-nvim'
+   use 'onsails/lspkind-nvim'
     use 'hrsh7th/cfp-buffer'
     use 'hrsh7th/cmp-nvim-lsp'
     use 'hrsh7th/nvim-cmp'
@@ -22,7 +24,8 @@ packer.startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = function() require('nvim-treesitter.install').update({ with_sync = true }) end,
     }
-    use 'windwp/nvim-autopairs'
+   use 'nanozuki/tabby.nvim'
+  use 'windwp/nvim-autopairs'
     use 'windwp/nvim-ts-autotag'
     use 'glepnir/lspsaga.nvim'
     use 'akinsho/nvim-bufferline.lua'
@@ -40,4 +43,5 @@ packer.startup(function(use)
     use 'tpope/vim-fugitive'
     use "lukas-reineke/indent-blankline.nvim"
     use "tpope/vim-surround"
+    use "voldikss/vim-floaterm"
 end)

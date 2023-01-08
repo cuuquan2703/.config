@@ -46,7 +46,9 @@ vim.api.nvim_create_autocmd("InsertLeave", {
 vim.opt.formatoptions:append { 'r' }
 vim.g.dracula_colorterm = 0
 vim.cmd [[ colorscheme dracula ]]
+
 vim.g.dracula_transparent = 1
+-- vim.cmd [[colorscheme nightfox]]
 
 --filenames like *.xml, *.html, *.xhtml, ...
 --These are the file extensions where this plugin is enabled.
